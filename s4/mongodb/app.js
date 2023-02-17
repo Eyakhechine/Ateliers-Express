@@ -1,7 +1,11 @@
 const express=require('express');
 const logger = require("morgan");
 const createError = require("http-errors");
-const contactRouter = require("./routes/contacts");
+const mongoose = require('mongoose');
+const dbConfig = require("./database/mongodb.json");
+
+const contactRouter = require("./routes/contacts.js");
+
 
 
 
@@ -20,6 +24,9 @@ app.use((req,res,next) =>{
 
 
 
+mongoose.connect(dbConfig.mongo.uri, {     useNewUrlParser: true ,      useUnifiedTopology: true 
+  },  ()=> console.log("Connected to mongoDB !!") ,
+   );
 
 
 
