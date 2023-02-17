@@ -21,6 +21,11 @@ res.json({message:'hello world'})
 
 });
 
-  
+  router.get("/find/:id", function (req, res, next) {
+    Contact.findById(req.params.id, (err, contacts) => {
+      res.json(contacts);
+    });
+  });
+
 
 module.exports = router;
