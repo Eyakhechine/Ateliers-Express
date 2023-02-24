@@ -1,0 +1,6 @@
+npm init
+server.js
+config package.json
+yarn add nodemon 
+yarn add express mongoose .........
+app.js:configs middleware bel app.use ( require express )
