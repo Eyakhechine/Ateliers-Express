@@ -10,9 +10,11 @@ const server = http.createServer(app);
 
 const io=require("socket.io")(server);
 
-io.on("conenction",(socket) =>{
+io.on("connection",(socket) => {
     console.log("user connected");
+   
     socket.emit("msg"," a new user is connected");
+
 });
 
 app.use("/chat",chatRouter);

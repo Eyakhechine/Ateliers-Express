@@ -5,15 +5,13 @@
 <script src ="/socket.io/socket.io.js"></script>
 </head>
 <body>
-<h1> hi </h2>
+
 <script>
 const socket =io.connect("ws://localhost:3000");
 socket.on("msg",(data) =>{
 p=document.createElement("p")
 p.innerText = (data)
 document.body.append(p)
-
-
 
 })
 
