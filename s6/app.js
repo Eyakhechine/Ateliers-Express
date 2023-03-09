@@ -12,7 +12,7 @@ const io=require("socket.io")(server);
 
 io.on("conenction",(socket) =>{
     console.log("user conencted");
-    socket.emit("msj"," a new user is connected");
+    socket.emit("msg"," a new user is connected");
 });
 
 app.use("/chat",chatRouter);
