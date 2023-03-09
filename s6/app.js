@@ -11,7 +11,7 @@ const server = http.createServer(app);
 const io=require("socket.io")(server);
 
 io.on("conenction",(socket) =>{
-    console.log("user conencted");
+    console.log("user connected");
     socket.emit("msg"," a new user is connected");
 });
 
